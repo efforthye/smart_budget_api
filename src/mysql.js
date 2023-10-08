@@ -1,7 +1,7 @@
 'use strict';
 
 import Sequelize from 'sequelize';
-import User from '../models/user.js';
+import User from './models/user.js';
 import configJson from '../config/mysql.json' assert { type: 'json' };
 
 const { NODE_ENV } = process.env;
