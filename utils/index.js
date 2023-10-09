@@ -26,4 +26,26 @@ function pwValidator(password) {
   return true;
 }
 
-export { emailValidator, pwValidator };
+function nameValidator(name) {
+  if (name == null) return false;
+  if (name.length < 2 || name.length > 10) {
+    return false;
+  } else if (name.match(/[^a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ가-힣]/) != null) {
+    return false;
+  }
+
+  return true;
+}
+
+function birthValidator(birth) {
+  if (birth == null) return false;
+  if (birth.length != 8) {
+    return false;
+  } else if (birth.match(/[^0-9]/) != null) {
+    return false;
+  }
+
+  return true;
+}
+
+export { emailValidator, pwValidator, nameValidator, birthValidator };
